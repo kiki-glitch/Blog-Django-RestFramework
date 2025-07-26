@@ -32,7 +32,7 @@ def blog_list(request):
     serializer = BlogSerializer(blogs, many=True)
     return Response(serializer.data)
 
-@api_view(["POST"])
+@api_view(["PUT"])
 @permission_classes([IsAuthenticated])
 def update_blog(request, pk):
     user = request.user
