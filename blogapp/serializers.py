@@ -24,8 +24,8 @@ class UserRegistrationSerializer(serializers.ModelSerializer):
         new_user.save()
         return new_user
     
-class BlogSeriaizer(serializers.ModelSerializer):
+class BlogSerializer(serializers.ModelSerializer):
     class Meta:
         model = Blog
-        fields = ields = ['id', 'title', 'slug', 'author', 'category', 'content', 'featured_image', 'published_date', 'created_at', 'updated_at', 'is_draft']
+        fields = ['id', 'title', 'slug', 'author', 'category', 'content', 'featured_image', 'published_date', 'created_at', 'updated_at', 'is_draft']
         
